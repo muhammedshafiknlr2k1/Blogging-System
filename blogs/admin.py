@@ -1,6 +1,13 @@
 from django.contrib import admin
-from .models import Category
+from .models import Category, Blogs
 
+class BlogAdmin(admin.ModelAdmin):
+    prepopulated_fields = {
+        'slug' : ('title',)
+    }
+    list_display = ['title', 'category', 'author', 'is_featured', 'status']
+    search_fields = ['id','title', 'category__category_name', 'status']
 # Register your models here.
 
 admin.site.register(Category)
+admin.site.register(Blogs, BlogAdmin)
