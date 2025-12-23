@@ -21,11 +21,11 @@
                 </div>
 
                 <div class="col-4">
-                    <form action="">
+                    <form action="{% url 'search' %}" method="get">
                         <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Enter search term..."
+                        <input class="form-control" type="text" name="keyword" value="{{keyword}}" placeholder="Enter search term..."
                             aria-label="Enter search term..." aria-describedby="button-search" />
-                        <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                        <button  class="btn btn-warning" id="button-search" type="submit">Go!</button>
                     </div>
                     </form>
                 </div>
