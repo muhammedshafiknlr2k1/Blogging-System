@@ -13,12 +13,13 @@ This project demonstrates how a production-ready blogging platform is designed a
 - [Features](#features)
 - [User Roles](#user-roles)
 - [Project Structure](#project-structure)
-- [Installation & Setup](#installation--setup)
+- [Installation and Setup](#installation-and-setup)
 - [Admin Panel](#admin-panel)
 - [Learning Outcomes](#learning-outcomes)
 - [Inspiration](#inspiration)
 - [Future Enhancements](#future-enhancements)
 - [Author](#author)
+
 
 ---
 
