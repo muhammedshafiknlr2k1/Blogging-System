@@ -9,12 +9,16 @@
 
     <!-- Right side content -->
     <div class="col-md-9">
+        {% if perms.auth.edit_category %}
         <h2>Edit Category</h2>
         <form action="{% url 'edit_category' category.id %}" method="POST" style="width: 500;">
             {% csrf_token %}
             {{form | crispy}}
             <button type="submit" class="btn btn-warning">Submit</button>
         </form><br>
+        {% else %}
+        <h2>You don't have permissions to view this page</h2>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
