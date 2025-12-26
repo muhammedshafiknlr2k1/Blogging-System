@@ -14,16 +14,8 @@ https://shafi.pythonanywhere.com
 - [Live Demo](#live-demo)
 - [Technologies Used](#technologies-used)
 - [Features](#features)
-- [User Roles](#user-roles)
-- [Project Structure](#project-structure)
-- [Installation and Setup](#installation-and-setup)
-- [Running the Application](#running-the-application)
-- [Admin Panel](#admin-panel)
-- [Usage](#usage)
 - [Learning Outcomes](#learning-outcomes)
-- [Inspiration](#inspiration)
-- [Future Enhancements](#future-enhancements)
-- [Author](#author)
+
 
 ---
 
@@ -59,7 +51,6 @@ https://shafi.pythonanywhere.com
 
 ### Authentication System
 - User registration and login
-- Secure session-based authentication
 - Logout functionality
 - Permission-based access control
 
@@ -85,24 +76,16 @@ https://shafi.pythonanywhere.com
 
 ---
 
-## User Roles
+##Learning Outcomes
 
-### Admin
-- Full system access
-- Manage users and permissions
-- Manage blog posts, categories, and comments
-- Access Django admin panel
+- Through this project, I gained hands-on experience in:
+- Django project structure
+- Django ORM and database relationships
+- Authentication and authorization
+- Template inheritance
+- CRUD operations
+- Admin customization
+- GitHub version control
+- Application deployment using PythonAnywhere
 
-### Author
-- Create, update, and delete own blog posts
-- View comments on authored posts
-
-### Normal User
-- View blog posts
-- Search blog content
-- Add comments
-
----
-
-## Project Structure
 
