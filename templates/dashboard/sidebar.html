@@ -14,18 +14,20 @@
             Users
         </a>
         {% endif %}
-
+        {% if perms.blogs.view_category %}
         <a href="{% url 'categories' %}"
            class="nav-link fw-semibold rounded-3 mb-1
            {% if '/categories' in request.path %}bg-primary text-white{% else %}text-dark{% endif %}">
             Categories
         </a>
-
+        {% endif %}
+        {% if perms.blogs.view_blogs %}
         <a href="{% url 'posts' %}"
            class="nav-link fw-semibold rounded-3 mb-1
            {% if '/posts' in request.path %}bg-primary text-white{% else %}text-dark{% endif %}">
             Posts
         </a>
+        {% endif %}
 
         <hr class="my-2">
 
