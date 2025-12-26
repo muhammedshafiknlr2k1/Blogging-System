@@ -2,28 +2,67 @@
 
 {% block content %}
 
+<div class="container my-5">
 
-<h3 class="text-uppercase text-warning" style="letter-spacing: 2px;">Search Term : {{keyword}}</h3>
-  <div class="row mb-2">
+  <!-- Search Header -->
+  <div class="mb-5 text-center">
+    <h3 class="text-uppercase fw-bold text-primary" style="letter-spacing: 2px;">
+      Search Results for
+    </h3>
+    <p class="fs-5 text-muted">
+      “{{ keyword }}”
+    </p>
+    <hr class="w-25 mx-auto border-primary">
+  </div>
+
+  <div class="row g-4">
+
     {% if searched_blogs %}
-    {% for blog in searched_blogs %}
-    
-    <div class="col-md-6">
-      <div class="card border-0" >
-        <div class="card-body">
-          <h3><a href="{% url 'blogs' blog.slug %}" class="text-dark">{{blog.title}}</a></h3>
-          <small class="mb-1 text-muted">{{blog.created_at | timesince }} ago | {{blog.author}}</small>
-          <p class="card-text">{{blog.short_description | truncatewords:15}}</p>
+      {% for blog in searched_blogs %}
+
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm rounded-4 hover-shadow">
+          <div class="card-body p-4">
+
+            <h4 class="card-title mb-2">
+              <a href="{% url 'blogs' blog.slug %}" 
+                 class="text-dark text-decoration-none fw-semibold">
+                {{ blog.title }}
+              </a>
+            </h4>
+
+            <small class="text-muted d-block mb-3">
+              {{ blog.created_at | timesince }} ago · {{ blog.author }}
+            </small>
+
+            <p class="card-text text-secondary mb-3">
+              {{ blog.short_description | truncatewords:15 }}
+            </p>
+
+            <a href="{% url 'blogs' blog.slug %}" 
+               class="btn btn-sm btn-outline-primary px-3">
+              Read More →
+            </a>
+
+          </div>
         </div>
       </div>
-    </div>
 
-    {% endfor %}
+      {% endfor %}
+
     {% else %}
-        <h3>No Posts Found!!!</h3>
+      <div class="col-12 text-center">
+        <div class="alert alert-info py-5 rounded-4 shadow-sm">
+          <h4 class="mb-2">No Posts Found 😕</h4>
+          <p class="mb-0 text-muted">
+            Try searching with a different keyword
+          </p>
+        </div>
+      </div>
     {% endif %}
-    
+
   </div>
 
 </div>
+
 {% endblock %}

@@ -1,69 +1,239 @@
 /* stylelint-disable selector-list-comma-newline-after */
 
+/* =========================
+   BASE & TYPOGRAPHY
+========================= */
+
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+a {
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* =========================
+   HEADER & BRAND
+========================= */
+
 .blog-header {
   border-bottom: 1px solid #e5e5e5;
 }
 
 .blog-header-logo {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
-  font-size: 2.25rem;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
 }
 
 .blog-header-logo:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+.blog-header-logo span {
+  transition: color 0.3s ease;
 }
+
+/* Brand colors */
+.brand-blog {
+  color: #0d6efd;
+}
+
+.brand-square {
+  color: #212529;
+}
+
+.blog-header-logo:hover .brand-blog {
+  color: #0a58ca;
+}
+
+.blog-header-logo:hover .brand-square {
+  color: #000;
+}
+
+/* =========================
+   SEARCH BAR
+========================= */
+
+.search-box {
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.search-box input {
+  border: none;
+  padding: 0.6rem 1.2rem;
+}
+
+.search-box input:focus {
+  box-shadow: none;
+}
+
+.search-box button {
+  border-radius: 0 50px 50px 0;
+}
+
+/* =========================
+   CATEGORY MENU
+========================= */
+
+.category-menu .nav-link {
+  color: #6c757d;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.category-menu .nav-link:hover {
+  color: #0d6efd;
+  background-color: rgba(13, 110, 253, 0.08);
+}
+
+/* =========================
+   HERO / JUMBOTRON
+========================= */
 
 .display-4 {
   font-size: 2.5rem;
 }
+
 @media (min-width: 768px) {
   .display-4 {
     font-size: 3rem;
   }
 }
 
-.flex-auto {
-  flex: 0 0 auto;
+/* =========================
+   BLOG CARDS
+========================= */
+
+.card {
+  border-radius: 1rem;
 }
 
-.h-250 { height: 250px; }
-@media (min-width: 768px) {
-  .h-md-250 { height: 250px; }
+.card-body {
+  padding: 1.5rem;
 }
 
-/* Pagination */
-.blog-pagination {
-  margin-bottom: 4rem;
+.card-title a {
+  color: #212529;
 }
 
-/*
- * Blog posts
- */
+.card-title a:hover {
+  color: #0d6efd;
+}
+
+.card-text {
+  color: #6c757d;
+}
+
+/* Hover lift */
+.card:hover {
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   BLOG POSTS
+========================= */
+
 .blog-post {
   margin-bottom: 4rem;
 }
+
 .blog-post-title {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
 }
+
 .blog-post-meta {
   margin-bottom: 1.25rem;
   color: #727272;
 }
 
-/*
- * Footer
- */
+/* =========================
+   SIDEBAR
+========================= */
+
+.blog-sidebar .card,
+.blog-sidebar .p-3 {
+  border-radius: 1rem;
+}
+
+/* =========================
+   COMMENTS
+========================= */
+
+textarea.form-control {
+  border-radius: 0.75rem;
+}
+
+textarea.form-control:focus {
+  box-shadow: none;
+  border-color: #0d6efd;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  border-radius: 50px;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+  background-color: #0a58ca;
+  border-color: #0a58ca;
+}
+
+/* =========================
+   PAGINATION
+========================= */
+
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 .blog-footer {
   padding: 2.5rem 0;
   color: #727272;
   text-align: center;
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
+  font-size: 0.9rem;
 }
+
 .blog-footer p:last-child {
   margin-bottom: 0;
+}
+
+/* =========================
+   UTILITIES
+========================= */
+
+.h-250 { height: 250px; }
+
+@media (min-width: 768px) {
+  .h-md-250 { height: 250px; }
 }
